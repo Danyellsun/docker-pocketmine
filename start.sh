@@ -7,7 +7,7 @@ if [ -e /data/install.sh ]; then
   rm -f /data/install.sh
 fi
 
-wget -q -O /data/install.sh https://get.pocketmine.net/
+wget -q -O /data/install.sh https://raw.githubusercontent.com/Danyellsun/docker-pocketmine/master/install.sh
 chmod 755 /data/install.sh
 
 # check if configuration file exists
@@ -22,4 +22,4 @@ chown -R minecraft:minecraft /data
 sudo -E -u minecraft ./install.sh -v development
 
 # start pocketmine
-exec sudo -E -u minecraft PHP_BINARY=/data/bin/php5/bin/php ./start.sh
+exec sudo -E -u minecraft PHP_BINARY=/data/bin/php7/bin/php ./start.sh
